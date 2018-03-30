@@ -1,34 +1,30 @@
-/*var http = require('http'),
-	server = http.createServer(function(req,res){
-		console.log(req.headers);
-		console.log(req.url);
-		res.writeHead(200,{'content-type':'text/plain'});
-		res.write('Hello World');
-		res.end();
-	});
-
-	server.listen(8080);
-	console.log('Listening on port 8080');*/
 var express = require('express'),
 	bodyParser = require('body-parser'),
 	app = express();
 
 var mysql = require('mysql');
 var fs = require('fs');
+
 var connection = mysql.createConnection({
-	host:'localhost',
-	user:'root',
-	database:'restoranservicebd',
+	host:'us-cdbr-iron-east-05.cleardb.net',
+	user:'b52837baa09d50',
+	password: '43894b92',
+	database:'heroku_7b52f55e763c3c7',
 	dateStrings: 'date',
 	port:3306,
 	 });
+
 connection.connect();
+setInterval(function () {
+    connection.query('SELECT 1');
+}, 5000);
+
 var array_IMG = [];
 
 connection.query('select * from zakaz',function(error,result){
 	var array_IMG = [];
     var array_zakazi = result;
-	console.log(array_zakazi.id_mesta);
+	console.log(array_zakazi.id_zakaza);
 
 app.disable('x-powered-by');
 
@@ -50,7 +46,7 @@ app.use(function(req,res,next){
 	next();
 });
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/'));
 app.use(bodyParser.urlencoded({encoded:true}));
 
 app.get('/glavnaya',function(req,res){
@@ -158,7 +154,7 @@ app.get('/oformlenie_zakaza/:stolik',function(req,res){
 
 });
 
-app.use('/oformlenie_zakaza/:stolik', express.static(__dirname + '/public'));
+app.use('/oformlenie_zakaza/:stolik', express.static(__dirname + '/public/'));
 
 app.get('/oformlenie_zakaza/:stolik/:kategoria',function(req,res){
 	connection.query('select id_bluda,nazv_bluda,cena,foto_bluda from menu where(id_tipa=("'+req.params.kategoria+'"))',function(error,result){
@@ -191,8 +187,9 @@ app.post('/oformlenie_zakaza',function(req,res){
 module.exports.button_array = button_array;
 });
 
-var server = app.listen(8080,function(){
-	console.log('Listening on port 8080');
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+    console.log("Listening on " + port);
 });
 
  
