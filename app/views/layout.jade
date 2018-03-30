@@ -1,0 +1,35 @@
+doctype
+head
+  title= 'WebService'
+  meta(charset='utf-8')
+  link(rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+  link(rel='stylesheet' href='css/style.css')
+body
+  .container.text
+    hr
+    ul.nav.nav-pills
+        li.text1: a(href=links[0])= 'Главная'
+        li.text1: a(href=links[1])= 'Оформление заказов'
+        li.text1: a(href=links[2])= 'Заказы'
+    hr
+  .container
+    .container
+      table(border='4' bordercolor='brown')
+        tr
+          td(width='10%')
+            p.table_small_text № заказа:
+          td(width='10%')
+            p.table_small_text № столика:
+          td(width='40%')
+            p.table_small_text Название блюда:
+          td(width='10%')
+            p.table_small_text Вес порции:
+          td(width='10%')
+            p.table_small_text Сумма заказа:
+          td(width='10%')
+            p.table_small_text Время заказа:
+          td(width='10%')
+            p.table_small_text Фото блюда:
+          hr
+    block arr_zakazi
+script(src='js/script.js')

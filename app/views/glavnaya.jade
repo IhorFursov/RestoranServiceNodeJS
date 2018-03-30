@@ -1,0 +1,25 @@
+doctype
+html
+  head
+    title WebService
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='css/style.css')
+  body
+    .container
+      p.title Добро пожаловать на наш сайт
+    .container.text
+      h1.text= page
+      hr
+      ul.nav.nav-pills
+          li.text1: a(href=links[0])= 'Главная'
+          li.text1: a(href=links[1])= 'Оформление заказа'
+          li.text1: a(href=links[2])= 'Заказы'      
+          hr
+      p  Добро пожаловать на сервис оформления заказов нашего ресторана
+      p  Для оформления заказа перейдите во вкладку "Оформление заказа", ответьте на задаваемые сервисом вопросы. Внимательно заполняйте поля, выбирайте столик на интерактивной карте зала ресторана. После того как все заказы к данному столику будут заполнены, можите возвращаться на вкладку "Главная". После этого заказы на данный столик будут переданны в базу данных и будут считаться актуальными для поваров и персонала ресторана. 
+      footer
+        Разработано в 2015 году. ТГАТУ. Г. Мелитополь
+    script(src='http://code.jquery.com/jquery-2.1.1.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')

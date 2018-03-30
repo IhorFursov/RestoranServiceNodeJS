@@ -1,0 +1,43 @@
+doctype
+head
+  title= 'WebService'
+  meta(charset='utf-8')
+  link(rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+  link(rel='stylesheet' href='css/style.css')
+body
+  .container
+    p= id_stolika + ' столик'
+    p= kategoria + ' категория'
+
+    form(method='post' action='/oformlenie_zakaza')
+        fieldset
+            .form-group
+                label(for='id_mesta') Ваш столик:
+                input#id_stolika.form-control(name='id_stolika' type='text' value= id_stolika)
+            .form-group.invisible
+                label(for='id_blud') Идентификатор блюда (*нажмите на кнопку с изображением блюда, для заполнения поля):
+                input#id_blud.form-control(name='id_bluda' type='text')
+            .form-group
+                label(for='summa_zakaza') Сумма заказа (*нажмите на кнопку с изображением блюда, для заполнения поля):
+                input#summa_zakaza.form-control(name='summa_zakaza' type='text')
+            .form-group
+                label(for='date') Время заказа (установиться по нажатию кнопки "Оформить заказ"):
+                input#date.form-control(name='date' type='text')
+            .form-group
+                button(id='time').btn.btn-primary(type='submit') Оформить заказ
+  - var summa_zakaza;
+  - var id_bluda;
+    each item in menu
+      button(id= item.id_bluda).menu_btn
+        img(src=''+item.foto_bluda).pic
+        p= item.nazv_bluda
+        p= item.cena + ' грн./ порция'
+        label(for='id').invisible Код блюда:
+        input(name='id' type='text' value= item.id_bluda).invisible
+        label(for='summa').invisible Цена порции:
+        input(name='summa' type='text' value= item.cena).invisible
+        
+          
+        
+
+script(src='js/script.js')

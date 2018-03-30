@@ -1,0 +1,152 @@
+   @font-face {
+    font-family: Liruss; /* Гарнитура шрифта */
+    src: url(LirussTYGRA.ttf); /* Путь к файлу со шрифтом */
+   }
+   .table_text{
+    font-size: 30pt;
+    line-height: 90%;
+   }
+   .table_small_text{
+    font-family: Georgia;
+    font-size: 18pt;
+    font-weight: 400;
+    color: brown;
+  }
+   .photo{
+    width: 40%;
+    float: left;
+    border: 2px inherit solid;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px brown;
+   }
+   #zanyatoe_mesto{
+    background-color: yellow;
+   }
+   .opisanie_filma{
+
+   }
+   .main_photo{
+    width: 100%;
+    margin: 5px;
+    border: 2px inherit solid;
+    border-radius: 15px;
+   }
+   .btn{
+    width: 95%;
+    height: 95%;
+    font-size: 60px;
+    font-family: Liruss;
+    text-align: center;
+    margin-left: 2px;
+    border: 2px inherit solid;
+    border-radius: 15px;
+    background-color: #AAAAFF;
+   }
+   .invisible{
+    display: none;
+   }
+   .menu_btn{
+    width: 24%;
+    margin: 2px;
+    border: 0px inherit solid;
+    border-radius: 20px;
+   }
+   .menu_div{
+    float: left;
+   }
+   .kategoria_btn{
+    width: 45%;
+    height: 40%;
+    margin: 10px;
+    border: 0px inherit solid;
+    border-radius: 15px;
+    margin-left: 40px;
+    margin-top: 20px;
+   }
+   body{
+    background-image: url('images/background.jpg');
+   }
+   .container{
+    background-image: url('images/container-background.jpg');
+    border: 2px gold groove;
+    border-radius: 20px;
+   }
+   p {
+    font-family: Liruss;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40pt;
+    text-shadow: 1px 1px 2px brown;
+    line-height: 90%;
+   }
+   .title{
+    font-family: Liruss;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 42pt;
+    font-weight: 400;
+    color: red;
+    text-shadow: 2px 2px 3px brown;
+   }
+   .text{
+   	font-family: Liruss;
+    font-size: 40pt;
+    text-shadow: 1px 1px 2px brown;
+   }
+   .text1{
+   	font-family: Liruss;
+    font-size: 33pt;
+    text-shadow: 1px 1px 2px brown;
+   }
+   .info-text{
+    font-family: Liruss;
+    font-size: 18pt;
+    font-weight: 600;
+    color: brown;
+   }
+  .with-border{
+    border: 2px #CCC solid;
+    border-radius: 10px;
+  }
+  .slide_image{
+    width: 100%;
+  }
+  .info_bluda{
+    width: 40%;
+    float: left;
+  }
+  .table{
+    line-height: 0.5;
+  }
+  .pic{
+    border: 2px inherit solid;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+  }
+  .mini_pic{
+    width: 100%;
+    border: 2px inherit solid;
+    border-radius: 5px;
+  }
+  .micro_pic{
+    width: 100%;
+    border: 2px inherit solid;
+    border-radius: 5px;
+  }
+  .table_small_text{
+    font-family: Georgia;
+    font-size: 18pt;
+    font-weight: 400;
+    color: brown;
+  }
+  ul a{
+    color: red;
+  }
+  .big_text{
+    line-height: 90%;
+    font-family: Liruss;
+    font-size: 33pt;
+  }
+

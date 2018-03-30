@@ -1,0 +1,23 @@
+extends layout
+block arr_zakazi
+  br
+  each zakaz in arr_zakazi
+    .container
+      table(border='4' bordercolor='brown') 
+        tr
+          td(width='10%')
+            p.table_small_text= zakaz.id_zakaza
+          td(width='10%')
+            p.table_small_text= zakaz.id_stolika
+          td(width='40%')
+            p.table_small_text= zakaz.nazv_bluda
+          td(width='10%')
+            p.table_small_text= zakaz.ves_porcii
+          td(width='10%')
+            p.table_small_text= zakaz.summa_zakaza
+          td(width='10%')
+            p.table_small_text= zakaz.date
+          td(width='10%')
+            img(src=''+zakaz.foto_bluda).mini_pic
+
+          
